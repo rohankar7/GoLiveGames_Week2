@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel='stylesheet' href='./css/index.css' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='navBar'>
+        <img src='./Assets/Logo.svg' alt='companyLogo' id='logo'/>
+        <img src='./Assets/GameCharacter_Sample.png' alt='userProfile' id='userPic'/>
+        <div id='z'>
+            <div id='right'></div>
+            <div id='left'></div>
+        </div>
+    </div>
+    <div class='page'>
+        <div class='sections'>
+            <section id='left'>
+                <div id='back'>
+                    <div id='leftArrow'>
+                        <img src='./Assets/AngleLeft.svg'/>
+                    </div>
+                    <div class='info'>
+                        <div id='info_type'>NEW AGE ESPORTS</div>
+                        <div id='info_ct'>CREATE TOURNAMENT</div>
+                    </div>
+                </div>
+                <div id='text'>
+                    <div class='text_head'>CREATE</div>
+                    <div class='text_list'>
+                        <div id='text_setup'>Setup</div>
+                        <div>Brackets</div>
+                        <div>Streams</div>
+                        <div>Publish</div>
+                    </div>
+                    <div class='text_head'>SHARE</div>
+                    <div class='text_list'>
+                        <div>Invite Players</div>
+                        <div>Embed Codes</div>
+                    </div>
+                </div>
+            </section>
+            <section id='right'>
+                <div id='right_navBar'>
+                    <a href=''>BASICS</a>
+                    <a href=''>MAP PICKS</a>
+                    <a href=''>HOME TEAM STATS</a>
+                    <a href=''>QUEST TEAM STATS</a>
+                    <a id='help' href=''>HELP</a>
+                </div>
+                <div class='BasicsPage'>
+                    <div class='Basics'>
+                        <div id="match_details">
+                            <div class='title'>MATCH DETAILS</div>
+                            <div id='haha'>
+                                <div id='selected_tournament'>SELECTED TOURNAMENT</div>
+                                <div id='tournament_name'>SKY LEAGUE TOURNAMENT</div>
+                            </div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div>
+                                        <div id='selectedDate'>Mar 10, 2021</div>
+                                        <img src='./Assets/Calendar.svg' alt='calendarImage' id='calendar'/>
+                                    </div>
+                                    <div class='predictions'>
+                                        <input placeholder="MATCH TYPE"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="teams_and_score">
+                            <div class='title'>TEAMS AND SCORE</div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div class='predictions'>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                        <span>DELHI DRAGONS</span>
+                                        <div>HOME TEAM</div>
+                                    </div>
+                                    <div class='predictions'>
+                                        <input placeholder="SELECT TEAM"/>
+                                        <div>GUEST TEAM</div>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE HOME TEAM SCORE"/>
+                                    </div>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE POLL PERCENTAGE"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="community_predictions">
+                            <div class='title'>COMMUNITY PREDICTIONS</div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE POLL PERCENTAGE"/>
+                                        <div>RESULT: &nbsp;1 - 2</div>
+                                    </div>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE POLL PERCENTAGE"/>
+                                        <div>RESULT: &nbsp;2 - 1</div>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE POLL PERCENTAGE"/>
+                                        <div>RESULT: &nbsp;3 - 0</div>
+                                    </div>
+                                    <div class='predictions'>
+                                        <input placeholder="TYPE POLL PERCENTAGE"/>
+                                        <div>RESULT: &nbsp;3 - 0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type='button' class='nextButton'>NEXT</button>
+                </div>
+                <div class='MapPicks'></div>
+                <div class='HomeTeamStats'></div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
