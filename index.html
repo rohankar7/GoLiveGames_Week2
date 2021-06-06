@@ -14,8 +14,8 @@
         <img src='./Assets/Logo.svg' alt='companyLogo' id='logo'/>
         <img src='./Assets/GameCharacter_Sample.png' alt='userProfile' id='userPic'/>
         <div id='z'>
-            <div id='right'></div>
-            <div id='left'></div>
+            <div id='z_right'></div>
+            <div id='z_left'></div>
         </div>
     </div>
     <div class='page'>
@@ -47,11 +47,11 @@
             </section>
             <section id='right'>
                 <div id='right_navBar'>
-                    <a href=''>BASICS</a>
-                    <a href=''>MAP PICKS</a>
-                    <a href=''>HOME TEAM STATS</a>
-                    <a href=''>QUEST TEAM STATS</a>
-                    <a id='help' href=''>HELP</a>
+                    <div href=''>BASICS</div>
+                    <div href=''>MAP PICKS</div>
+                    <div href=''>HOME TEAM STATS</div>
+                    <div href=''>QUEST TEAM STATS</div>
+                    <div id='help' href=''>HELP</div>
                 </div>
                 <div class='BasicsPage'>
                     <div class='Basics'>
@@ -125,10 +125,126 @@
                     </div>
                     <button type='button' class='nextButton'>NEXT</button>
                 </div>
-                <div class='MapPicks'></div>
+                <div class='MapPicksPage' style='display: none;'>
+                    <div class='MapPicks'>
+                        <div class="map">
+                            <div class='title'>FIRST MAP</div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT MAP"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT A PICKING TEAM"/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <div>HOME TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <div>GUEST TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="VOD LINK"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input type="image/*" placeholder="UPLOAD SCREENSHOT"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <div class='title'>FIRST MAP</div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT MAP"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT A PICKING TEAM"/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <div>HOME TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <div>GUEST TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="VOD LINK"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input type="image/*" placeholder="UPLOAD SCREENSHOT"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <div class='title'>FIRST MAP</div>
+                            <div class='fields'>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT MAP"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input placeholder="SELECT A PICKING TEAM"/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <div>HOME TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <div>GUEST TEAM SCORE</div>
+                                        <img src='./Assets/TeamBadge_Sample.png' alt='teamLogo'/>
+                                    </div>
+                                </div>
+                                <div class='field_row'>
+                                    <div class='mapField'>
+                                        <input placeholder="VOD LINK"/>
+                                    </div>
+                                    <div class='mapField'>
+                                        <input type="image/*" placeholder="UPLOAD SCREENSHOT"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type='button' class='backButton'>BACK</button>
+                    <button type='button' class='nextButton'>NEXT</button>
+                </div>
                 <div class='HomeTeamStats'></div>
             </section>
         </div>
     </div>
+    <script>
+        const basic_nextButton = document.getElementsByClassName('nextButton')[0];
+        const mapPicks_backButton = document.getElementsByClassName('backButton')[0];
+        const mapPicks_nextButton = document.getElementsByClassName('nextButton')[1];
+
+        basic_nextButton.onclick = () => {
+            document.getElementsByClassName('BasicsPage')[0].style.display = 'none';
+            document.getElementsByClassName('MapPicksPage')[0].style.display = 'block';
+        }
+        mapPicks_backButton.onclick = () => {
+            document.getElementsByClassName('BasicsPage')[0].style.display = 'block';
+            document.getElementsByClassName('MapPicksPage')[0].style.display = 'none';
+        }
+        mapPicks_nextButton.onclick = () => {
+            document.getElementsByClassName('MapPicksPage')[0].style.display = 'none';
+            document.getElementsByClassName('HomeTeamStatsPage')[0].style.display = 'block';
+        }
+    </script>
 </body>
 </html>

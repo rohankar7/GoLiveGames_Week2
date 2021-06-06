@@ -16,6 +16,7 @@
 body{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    background: #16032A 0% 0% no-repeat padding-box;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -24,7 +25,7 @@ body::-webkit-scrollbar{
     padding-left: 20px;
 }
 .page{
-    height: 300vh;
+    height: calc(100vh - 70px);
     position: absolute;
     top: 70px;
     background: #16032A 0% 0% no-repeat padding-box;
@@ -36,6 +37,8 @@ body::-webkit-scrollbar{
 #left{
     width: 300px;
     /* width: 20vw; */
+    position: fixed;
+    z-index: 1;
     height: 700px;
     float: left;
     display: flex;
@@ -43,7 +46,9 @@ body::-webkit-scrollbar{
 }
 #right{
     width: calc(100vw - 300px);
+    position: absolute;
     /* width: 80vw; */
+    left: 300px;
     height: 700px;
     float: right;
     background: #16032A 0% 0% no-repeat padding-box;
@@ -99,9 +104,13 @@ body::-webkit-scrollbar{
     color: #fff;
 }
 #right_navBar{
+    left: 300px;
+    position: fixed;
+    z-index: 1;
     height: 60px;
     width: calc(100vw - 300px);
     padding-top: 23px;
+    background: #16032A 0% 0% no-repeat padding-box;
 }
 #right_navBar>*{
     color: var(--unnamed-color-ffffff);
@@ -110,7 +119,8 @@ body::-webkit-scrollbar{
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    padding-left: 29px;
+    margin-left: 29px;
+    display: inline-block;
 }
 #help{
     float: right;
@@ -119,18 +129,18 @@ body::-webkit-scrollbar{
     letter-spacing: 0.53px;
     color: #BA32FF;
 }
-.Basics{
+.Basics, .MapPicks{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 746px;
     width: 100%;
 }
-#match_details, #teams_and_score, #community_predictions{
+#match_details, #teams_and_score, #community_predictions, .map{
     padding-top: 13px;
     width: calc(100% - 58px);
-    height: 230px;
+    min-height: 230px;
     background: var(--unnamed-color-21123a) 0% 0% no-repeat padding-box;
     background: #21123A 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -203,14 +213,14 @@ body::-webkit-scrollbar{
     top: 28px;
     right: 70px;
 }
-#z>#left, #z>#right{
+#z>#z_left, #z>#z_right{
     width: 36px;
     height: 4px;
     background: #fff;
     margin-bottom: 5px;
     float: left;
 }
-#z>#right{
+#z>#z_right{
     float: right;
 }
 .predictions>div{
@@ -221,7 +231,23 @@ body::-webkit-scrollbar{
     color: #BA32FF;
     margin-top: -12.5px;
 }
-.predictions>input{
+.predictions>img{
+    float: left;
+    margin-top: -5px;
+}
+.mapField>img{
+    float: right;
+    margin-top: -5px;
+}
+.mapField>div{
+    float: left;
+    text-align: right;
+    font: normal normal 600 18px/52px Rajdhani;
+    letter-spacing: 0px;
+    color: #5637A2;
+    margin-top: -12.5px;
+}
+input{
     margin-top: -4px;
     width: 50%;
     float:left;
@@ -234,12 +260,8 @@ body::-webkit-scrollbar{
     background: #21123A 0% 0% no-repeat padding-box;
     border: none;
 }
-.predictions>input::placeholder{
+input::placeholder{
     color: #5637A2;
-}
-.predictions>img{
-    float: left;
-    margin-top: -5px;
 }
 span{
     font: normal normal 600 18px/47px Rajdhani;
@@ -251,7 +273,9 @@ span{
     padding-left: 10px;
     float: left;
 }
-.nextButton{
+button{
+    position: relative;
+    cursor: pointer;
     font: normal normal bold 16px/16px Rajdhani;
     letter-spacing: 0.56px;
     color: #fff;
@@ -260,8 +284,20 @@ span{
     background: #BA32FF 0% 0% no-repeat padding-box;
     border-radius: 5px;border: none;
     text-align: center;
-    float: right;
     margin: 10px 29px;
+    margin-bottom: 39px;
+}
+button:hover{
+    background: #7C758D;
+}
+.nextButton{
+    left: calc(calc(100% - 58px) - 128px); 
+}
+/* .BasicsPage>.nextButton{
+    left: calc(calc(100% - 58px) - 128px); 
+} */
+.MapPicksPage>.nextButton{
+    left: calc(calc(100% - 58px) - 318.5px); 
 }
 #selectedDate{
     text-align: left;
@@ -276,4 +312,18 @@ span{
     float: right;
     position: relative;
     top: -53px;
+}
+.BasicsPage, .MapPicksPage, .HomeTeamStatsPage{
+    position: relative;
+    /* border: 2px solid yellow; */
+    top: 70px;
+}
+.MapPicks{
+    height: 950px;
+}
+.map{
+    min-height: 300px;
+}
+.map>.fields{
+    height: 255px;
 }
