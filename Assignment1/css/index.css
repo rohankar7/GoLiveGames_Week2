@@ -494,11 +494,17 @@ p{
     height: 0; 
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent; 
-    /* border-left: 10px solid transparent;  */
     border-right: 15px solid #16032A;
     z-index: 2;
-    /* background-color: white; */
     float: right;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
