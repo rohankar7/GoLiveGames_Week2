@@ -4,8 +4,9 @@
     box-sizing: border-box;
     color: white;
     text-align: left;
+    text-transform: uppercase;
     /* font-size: 0.01vw; */
-}    
+}
 .navBar{
     width: 100%;
     height: 70px;
@@ -55,7 +56,6 @@ body::-webkit-scrollbar{
 }
 #left>*{
     margin-top: 5px;
-    background: var(--unnamed-color-251942) 0% 0% no-repeat padding-box;
     background: #251942 0% 0% no-repeat padding-box;
 }
 #back{
@@ -72,29 +72,23 @@ body::-webkit-scrollbar{
     padding-left: 45px;
 }
 #info_type{
-    color: var(--unnamed-color-ffffff);
     font: normal normal normal 18px/16px Rajdhani;
     letter-spacing: 0.63px;
     color: #fff;
-    text-transform: uppercase;
 }
 #info_ct{
-    color: var(--unnamed-color-ba32ff);
     font: normal normal 600 14px/16px Rajdhani;
     letter-spacing: 0.49px;
     color: #BA32FF;
-    text-transform: uppercase;
 }
 .text_head{
     padding-top: 47px;
     font: normal normal bold 16px/16px Rajdhani;
     letter-spacing: 0.56px;
     color: #fff;
-    text-transform: uppercase;
     padding-bottom: 28px;
 }
 .text_list>div{
-    color: var(--unnamed-color-7c758d);
     font: normal normal 500 14px/20px Rajdhani;
     letter-spacing: 0.49px;
     color: #7C758D;
@@ -112,16 +106,18 @@ body::-webkit-scrollbar{
     padding-top: 23px;
     background: #16032A 0% 0% no-repeat padding-box;
 }
-#right_navBar>*{
-    color: var(--unnamed-color-ffffff);
+#right_navBar>*, #allMaps_text, #attackStats_text, #totalStats_text, #first_text, #second_text, #ascent_text{
     font: normal normal bold 16px/16px Rajdhani;
     letter-spacing: 0.56px;
     color: #fff;
-    text-transform: uppercase;
     text-decoration: none;
     margin-left: 29px;
     display: inline-block;
 }
+#ascent_text, #first_text, #second_text{
+    margin-bottom: 30px;
+}
+#ascent_text{margin-left: 18px;}
 #help{
     float: right;
     padding-right: 68px;
@@ -129,7 +125,7 @@ body::-webkit-scrollbar{
     letter-spacing: 0.53px;
     color: #BA32FF;
 }
-.Basics, .MapPicks{
+.Basics, .MapPicks, .HomeTeamStats{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -141,16 +137,13 @@ body::-webkit-scrollbar{
     padding-top: 13px;
     width: calc(100% - 58px);
     min-height: 230px;
-    background: var(--unnamed-color-21123a) 0% 0% no-repeat padding-box;
     background: #21123A 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 .title{
-    color: var(--unnamed-color-ffffff);
     font: normal normal bold 16px/16px Rajdhani;
     letter-spacing: 0.56px;
     color: #fff;
-    text-transform: uppercase;
     padding-left: 19px;
     margin-top: 16px;
 }
@@ -158,7 +151,6 @@ body::-webkit-scrollbar{
     font: normal normal 600 15px/52px Rajdhani;
     letter-spacing: 0px;
     color: #5637A2;
-    text-transform: uppercase;
     padding-left:29px;
     margin: 0;padding-left:29px;
 }
@@ -166,7 +158,6 @@ body::-webkit-scrollbar{
     font: normal normal 600 25px/52px Rajdhani;
     letter-spacing: 0px;
     color: #fff;
-    text-transform: uppercase;
     opacity: 0.9;
     padding-left: 29px;
     margin-top: -29px;
@@ -267,7 +258,6 @@ span{
     font: normal normal 600 18px/47px Rajdhani;
     letter-spacing: 0px;
     color: #fff;
-    text-transform: uppercase;
     height: 23px;
     margin-top:-12px;
     padding-left: 10px;
@@ -285,7 +275,7 @@ button{
     border-radius: 5px;border: none;
     text-align: center;
     margin: 10px 29px;
-    margin-bottom: 39px;
+    margin-bottom: 30px;
 }
 button:hover{
     background: #7C758D;
@@ -293,10 +283,7 @@ button:hover{
 .nextButton{
     left: calc(calc(100% - 58px) - 128px); 
 }
-/* .BasicsPage>.nextButton{
-    left: calc(calc(100% - 58px) - 128px); 
-} */
-.MapPicksPage>.nextButton{
+.MapPicksPage>.nextButton, .HomeTeamStatsPage>.nextButton{
     left: calc(calc(100% - 58px) - 318.5px); 
 }
 #selectedDate{
@@ -315,7 +302,6 @@ button:hover{
 }
 .BasicsPage, .MapPicksPage, .HomeTeamStatsPage{
     position: relative;
-    /* border: 2px solid yellow; */
     top: 70px;
 }
 .MapPicks{
@@ -326,4 +312,210 @@ button:hover{
 }
 .map>.fields{
     height: 255px;
+}
+.HomeTeamStats{
+    min-height: 3293px;
+}
+#team_description, #ascent, #allMaps, #attackStats, #totalStats{
+    width: calc(100% - 58px);
+    height: 123px;
+    background: #21123A 0% 0% no-repeat padding-box;
+}
+#team_description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 58px);
+    height: 123px;
+    padding-left: 29px;
+    padding-right: 29px;
+}
+#memberProfiles, #des{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 301px; 
+}
+#memberProfiles>img, .name>img{
+    width: 45px; height: 45px; background: yellowgreen; border-radius: 50%;
+}
+p{
+    display:inline-block;
+    text-align: left;
+    font: normal normal 600 25px/47px Rajdhani;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+#bigTeamLogo{
+    width: 78px; height: 78px;
+}
+#allMaps, #attackStats, #totalStats{
+    width: calc(100% - 58px);
+    min-height: 842px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.allMaps_child{
+    width: 100%;
+    min-height: 115px;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}
+.name{
+    min-width: 20%;
+    background: #21123A 0% 0% no-repeat padding-box;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.name>img{margin-left: 29px;}
+.name>div{
+    margin-left: 19px;
+    text-align: left;
+    font: normal normal 600 18px/52px Rajdhani;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+.allMaps_child_column{
+    min-width: 80%;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+}
+.allMaps_child_row{
+    display: flex;
+    align-items: space-around;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 0 49px;
+}
+.first_row{
+    padding-bottom: 15px;
+}
+.allMaps_child_row>div{
+    border: 1px solid #5637A2 ;
+    min-height: 50px;
+    width: 23%;
+    margin-left: calc(8% / 3);
+    background: #21123A 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+.last_div{
+    min-width: calc(46% + calc(4% / 3));
+}
+.allMaps_child_row>div>input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*---------------------------------*/
+    margin-top: 0px;
+    border-radius: 5px;
+    text-align: left;
+    font: normal normal 600 17px/49px Rajdhani;
+    letter-spacing: 0px;
+    background: #21123A 0% 0% no-repeat padding-box;
+    border: 1px solid #5637A2 ;
+    padding-left: 14px;
+}
+#ascent{
+    min-height: 2288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.firstHalf, .secondHalf, .events, .ascent_teamScores{
+    margin-bottom: 20px;
+}.ascent_teamScores{
+    margin-top: 29px;
+}
+#specialDiv{
+    width: calc(22% + calc(1% / 3));
+}
+#attackStats, #totalStats{
+    width: 100%;
+    border-bottom: 6px solid #16032A;
+}
+.spaceDiv{
+    width: 100%;
+    height: 20px;
+}
+#attackLogo{position: relative; top: 4px; max-width: 18px; max-height: 18px;}
+.events{
+    margin-left: 29px;
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% - 58px);
+}
+.events>div{
+    width: 40px;
+    height: 100px;
+    background: #16032A 0% 0% no-repeat padding-box;
+    border: 1px solid #5637A2;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font: normal normal 600 20px/47px Rajdhani;
+    letter-spacing: 0px;
+}
+#plusLogo{background: #BA32FF;}
+#navIndicator{
+    min-width: calc(100vw - 300px);
+    min-height: 5px;
+    z-index: 2;
+    position: absolute;
+    top: 49px;
+    /* background: yellow; */
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 120px;
+}
+#navIndicator>*{
+    z-index: 3;
+    width: 50px;
+    background: #BA32FF;
+    min-height: 100%;
+    margin-left: 30px;
+    /* display: none; */
+}
+#nav_child_2{width: 80px;}
+#nav_child_3{width: 134px;}
+#nav_child_4{width: 144px;}
+#triangle{
+    margin-top: 80px;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    /* border-left: 10px solid transparent;  */
+    border-right: 15px solid #16032A;
+    z-index: 2;
+    /* background-color: white; */
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    #right, #right_navBar, .navIndicator{
+        width: 1000px;
+    }
 }
